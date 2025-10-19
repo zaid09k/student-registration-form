@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      background-color: #fce0e0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 70%;
+      margin: 10%;
+      background-color: #ffe6e6;
+      padding: 5% ;
+     
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 26px;
+      
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="file"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    .inline-input {
+      display: flex;
+      gap: 10px;
+    }
+
+    .inline-input input {
+      width: 100%;
+    }
+
+    .gender, .department {
+      margin-top: 5px;
+    }
+
+    .gender label,
+    .department label {
+      font-weight: normal;
+      margin-right: 15px;
+    }
+
+    button {
+      background-color: #ff6666;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      display: block;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #ff4d4d;
+    }
+
+    small {
+      font-size: 12px;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Student Registration Form</h2>
+
+    <form>
+      <label>Roll no. :</label>
+      <input type="text" name="rollno" placeholder="Enter Roll Number">
+
+      <label>Student name :</label>
+      <div class="inline-input">
+        <input type="text" name="fname" placeholder="First Name">
+        <input type="text" name="lname" placeholder="Last Name">
+      </div>
+
+      <label>Father's name :</label>
+      <input type="text" name="fathername" placeholder="Enter Father's Name">
+
+      <label>Date of birth :</label>
+      <div class="inline-input">
+        <input type="text" placeholder="Day">
+        <input type="text" placeholder="Month">
+        <input type="text" placeholder="Year">
+      </div>
+      <small>(DD-MM-YYYY)</small>
+
+      <label>Mobile no. :</label>
+      <div class="inline-input">
+        <input type="text" value="+91" style="width:60px;" readonly>
+        <input type="text" name="mobile" placeholder="Enter Mobile Number">
+      </div>
+
+      <label>Email id :</label>
+      <input type="email" name="email" placeholder="Enter Email">
+
+      <label>Password :</label>
+      <input type="password" name="password" placeholder="Enter Password">
+
+      <label>Gender :</label>
+      <div class="gender">
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+      </div>
+
+      <label>Department :</label>
+      <div class="department">
+        <label><input type="checkbox" name="dept" value="CSE"> CSE</label>
+        <label><input type="checkbox" name="dept" value="IT"> IT</label>
+        <label><input type="checkbox" name="dept" value="ECE"> ECE</label>
+        <label><input type="checkbox" name="dept" value="Civil"> Civil</label>
+      </div>
+
+      <label>Course :</label>
+      <select name="course">
+        <option>-- Select Current Course --</option>
+        <option>B.Tech</option>
+        <option>B.Sc</option>
+        <option>BCA</option>
+        <option>M.Tech</option>
+        <option>MCA</option>
+      </select>
+
+      <label>Student photo :</label>
+      <input type="file" name="photo">
+
+      <label>City :</label>
+      <input type="text" name="city" placeholder="Enter City">
+
+      <label>Address :</label>
+      <textarea name="address" rows="3" placeholder="Enter Address"></textarea>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+</body>
+</html>
